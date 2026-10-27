@@ -4,7 +4,7 @@ Mini sistema en React (Vite) que simula un login real con la API de DummyJSON y 
 
 ## Integrantes
 
-- Avendaño Chavés Nadya Yahuilí
+- Avendaño Chavéz Nadya Yahuilí
 - López Cortés Hayley Brithany
 
 ## API elegida para la tabla
