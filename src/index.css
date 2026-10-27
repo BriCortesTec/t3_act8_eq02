@@ -1,0 +1,297 @@
+/* ===== Estilos globales de RoastLab (Persona A) ===== */
+:root {
+  --cream: #f3efe7;
+  --card: #faf7f2;
+  --border: #e8e1d8;
+  --green-900: #1e4d2b;
+  --green-700: #2d5a3a;
+  --caramel: #b87a4b;
+  --caramel-dark: #9c6339;
+  --text: #5a3b2e;
+  --text-soft: #7a6457;
+  --danger: #b3402f;
+  --danger-dark: #96321f;
+  --success: #2d6a3e;
+  --radius: 10px;
+  --shadow: 0 2px 10px rgba(60, 40, 20, 0.08);
+  --font-title: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  background: var(--cream);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  color: var(--green-900);
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--caramel);
+  outline-offset: 2px;
+}
+
+/* ----- Botones ----- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--caramel);
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--caramel-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--green-900);
+}
+
+.btn-outline:hover:not(:disabled) {
+  background: #efe9de;
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: var(--danger-dark);
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.btn-lg {
+  padding: 13px 20px;
+  font-size: 16px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ----- Campos de formulario ----- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-family: var(--font-title);
+  font-size: 14px;
+  color: var(--green-900);
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.input:focus {
+  border-color: var(--caramel);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(184, 122, 75, 0.2);
+}
+
+.input.has-error,
+.input-wrap.has-error {
+  border-color: var(--danger);
+}
+
+.field-error {
+  font-size: 13px;
+  color: var(--danger);
+}
+
+.form-alert {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #fbeae6;
+  border: 1px solid #efc3ba;
+  border-radius: 8px;
+  color: var(--danger-dark);
+  font-size: 14px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+/* ----- Modal ----- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(30, 20, 10, 0.5);
+}
+
+.modal {
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.modal-sm {
+  max-width: 420px;
+}
+
+.modal-md {
+  max-width: 600px;
+}
+
+.modal-lg {
+  max-width: 800px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-header h3 {
+  font-size: 20px;
+}
+
+.modal-close {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--text-soft);
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background: #efe9de;
+}
+
+.modal-body {
+  padding: 22px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.confirm-message {
+  line-height: 1.6;
+}
+
+/* ----- Avatares ----- */
+.avatar {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #eadfcb;
+  color: var(--green-900);
+  font-weight: 600;
+  object-fit: cover;
+}
+
+.avatar-sm {
+  width: 34px;
+  height: 34px;
+  font-size: 13px;
+}
+
+.avatar-md {
+  width: 44px;
+  height: 44px;
+}
+
+.avatar-lg {
+  width: 96px;
+  height: 96px;
+}
+
+@media (max-width: 560px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
