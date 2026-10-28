@@ -22,7 +22,7 @@ function parseLimit(value) {
 }
 
 /**
- * Hook principal de la tabla de productos (Persona B).
+ * Hook principal de la tabla de productos 
  * Maneja: parámetros de la URL, carga desde la API, filtros, paginación y CRUD.
  *
  * Estado local (useState) para reflejar las escrituras simuladas de DummyJSON:

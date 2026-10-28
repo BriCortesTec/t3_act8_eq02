@@ -45,3 +45,17 @@ src/
 ## Nota
 
 DummyJSON simula las escrituras (POST, PUT, DELETE): la petición se hace de verdad, pero los cambios no persisten en el servidor. Por eso la tabla refleja los cambios con el estado local de React.
+
+## Captura de pantalla
+
+Capturas desde el diseño de la paágina creadas desde Figma Design
+
+1.Login mostrando dos campos, de usuario y contraseña
+![Login](img/captura-login.png)
+
+2.Dashboard princilap que aparece después de logearse
+![Inicio](img/captura-inicio.png)
+
+3.Dashboard que muestra una tabla de tuestes
+![Tuestes](img/captura-tuestes.png)
+
