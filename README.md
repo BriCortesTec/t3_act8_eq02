@@ -59,4 +59,4 @@ Capturas desde el diseño de la paágina creadas desde Figma Design
 3.Dashboard que muestra una tabla de tuestes
 ![Tuestes](img/captura-tuestes.png)
 
-### Pruebas de terminal y subirlas a producción
+
